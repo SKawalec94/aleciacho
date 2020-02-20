@@ -6,10 +6,10 @@
 
 	session_start();
 
-    define('DB_SERVER', 'localhost');
-    define('DB_USERNAME', 'so586_skawalec');
-    define('DB_PASSWORD', '');
-    define('DB_DATABASE', 'so586_ciacho');
+    define('DB_SERVER', 'eu-cdbr-west-02.cleardb.net');
+    define('DB_USERNAME', 'bd94273cab1fb9');
+    define('DB_PASSWORD', '4f5dc87b');
+    define('DB_DATABASE', 'heroku_beef761ec3e9daa');
     $conn = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
     mysqli_set_charset($conn,"utf8");
