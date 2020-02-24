@@ -72,7 +72,7 @@
                                     $result = mysqli_query($conn, $sql);
                                     while ($row = mysqli_fetch_assoc($result)) {
                                         $PID = $row["id"];
-                                        $grafika = $row["grafika"];
+                                        $grafika = $domain + $row["grafika"];
                                         $nazwa = $row["nazwa"];
                                         $cena = $row["cena"];
                                         $kategoria = $row["kategoria"];
