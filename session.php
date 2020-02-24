@@ -7,6 +7,8 @@
 */
 	session_start();
 
+	$domain = "https://aleciacho.herokuapp.com/";
+
     define('DB_SERVER', 'eu-cdbr-west-02.cleardb.net');
     define('DB_USERNAME', 'bd94273cab1fb9');
     define('DB_PASSWORD', '4f5dc87b');
