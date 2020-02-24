@@ -86,7 +86,7 @@
 <nav class="navbar navbar-expand navbar-dark">
     <div class="collapse navbar-collapse justify-content-around" id="navbar">
         <a id="navlogo" class="navbar-nav navbar-brand" href="<?php echo $domain; ?>">
-            <img id="ikonka" src=<?php echo $domain; ?>"ikony/cupcake3.png" alt="Logo">AleCiacho!
+            <img id="ikonka" src="<?php echo $domain; ?>ikony/cupcake3.png" alt="Logo">AleCiacho!
         </a>
 
         <div id="kategorie" class="navbar-nav">
