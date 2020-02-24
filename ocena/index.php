@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['transakcja']))
 			    <div class="row">
 			        <div class="col-12">
 			            <ol class="breadcrumb">
-			                <li class="breadcrumb-item"><a href="https://aleciacho.eu/">Strona główna</a></li>
+			                <li class="breadcrumb-item"><a href="'.$domain.'">Strona główna</a></li>
 			                <li class="breadcrumb-item active">Ocena zakupionych produktów</li>
 			            </ol>
 			        </div>
@@ -49,7 +49,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['transakcja']))
 		        <div style="margin: auto; width: 45vw; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" class="card">
 	            	<div class="card-body">
 	            		<form class="formularz">
-	            			<h3><a style="display: block; text-align: center;" href="https://aleciacho.eu/produkt/?pid='.$id.'">'.$nazwa.'</a></h3>
+	            			<h3><a style="display: block; text-align: center;" href="'.$domain.'produkt/?pid='.$id.'">'.$nazwa.'</a></h3>
 	            			<hr>
 	            			<img style="width: 60%; margin: auto; margin-top: 4%; display: block;" src="'.$grafika.'">
 	            			<h4 style="display: block; margin-top: 4%;">Twoja ocena:</h4>';
@@ -128,7 +128,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['transakcja']))
                 type: 'POST',
                 data: {"ocenka": ocenka, "komentarz": komentarz, "id_towaru": id_towaru},
             	}).done(function(){
-            		window.location.replace("https://aleciacho.eu/konto/");
+            		window.location.replace("<?php echo $domain; ?>konto/");
             	});
 
 			});
@@ -140,7 +140,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['transakcja']))
 	<?php
 
 } else {
-	header('Location: https://aleciacho.eu/');
+	header("Location: $domain");
     exit();
 }
 

@@ -1,7 +1,7 @@
 <?php
 include '../session.php';
 
-if($_SESSION['log_state'] == 0) header('Location: https://aleciacho.eu/');
+if($_SESSION['log_state'] == 0) header("Location: $domain");
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
@@ -16,7 +16,7 @@ require_once __DIR__ . '/../navbar.php';
     <div class="row">
         <div class="col-sm-12">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="https://aleciacho.eu/">Strona główna</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo $domain; ?>">Strona główna</a></li>
                 <li class="breadcrumb-item active">Dostawa i płatność</li>
             </ol>
         </div>
@@ -191,7 +191,7 @@ require_once __DIR__ . '/../navbar.php';
                                     <th class="row_id" scope="row" hidden>'. $i++ .'</th>
                                     <td><img class="miniaturka" src="'.$grafika.'"></td>
                                     <td><input type="hidden" id="idT" value="'.$id_towaru.'" style="padding: 0px;"></td>
-                                    <td class="nazwaProduktu"><a href="https://aleciacho.eu/produkt/?pid='.$id_towaru.'">'.$nazwa.'</a></td>
+                                    <td class="nazwaProduktu"><a href='.$domain.'"produkt/?pid='.$id_towaru.'">'.$nazwa.'</a></td>
                                     <td hidden="hidden"><a id="cena">'.$cena.'</a> zł</td>
                                     <td class="ile non-selective">
                                         <p><a id="ilosc">'.$ilosc.'</a> szt.</p>
@@ -450,7 +450,7 @@ require_once('../footer.php');
         });
 
         $("#complete").click(function(){
-            location.replace("https://aleciacho.eu/");
+            location.replace("<?php echo $domain; ?>");
         });
 
     });

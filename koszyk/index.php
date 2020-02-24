@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col-sm-12">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="https://aleciacho.eu/">Strona główna</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo $domain; ?>">Strona główna</a></li>
                 <li class="breadcrumb-item active">Koszyk</li>
             </ol>
         </div>
@@ -65,7 +65,7 @@
                                     <th style="display: none;"class="row_id" scope="row">'. $i++ .'</th>
                                     <td><img class="miniaturka" src="'.$grafika.'"></td>
                                     <td><input type="hidden" id="idT" value="'.$id_towaru.'" style="padding: 0px;"></td>
-                                    <td class="nazwaProduktu"><a href="https://aleciacho.eu/produkt/?pid='.$id_towaru.'">'.$nazwa.'</a></td>
+                                    <td class="nazwaProduktu"><a href="'.$domain.'produkt/?pid='.$id_towaru.'">'.$nazwa.'</a></td>
                                     <td hidden="hidden"><a id="cena">'.$cena.'</a> zł</td>
                                     <td class="ile non-selective">
                                         <p><i class="fas plus non-selective">&#xf067;</i><a id="ilosc">'.$ilosc.'</a> szt.<i class="fas minus non-selective">&#xf068;</i></p>
@@ -204,7 +204,7 @@
         });
 
         $('#buy_all').click(function () {
-            location.replace('https://aleciacho.eu/zakupy/');
+            location.replace('<?php echo $domain; ?>zakupy/');
         });
 
         if(<?php echo $_SESSION['suma_koszyka']; ?> == 0) {

@@ -2,7 +2,7 @@
 	include __DIR__ . '/../session.php';
 
     if($_SESSION['log_state'] == 1){
-        header('Location: https://aleciacho.eu/');
+        header("Location: $domain");
         exit();
     }
 
@@ -74,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 <div class="row okruszki">
     <div class="col-sm-12">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="https://aleciacho.eu/">Strona główna</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo $domain; ?>">Strona główna</a></li>
             <li class="breadcrumb-item active">Rejestracja</li>
         </ol>
     </div>

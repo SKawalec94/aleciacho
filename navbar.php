@@ -85,7 +85,7 @@
 
 <nav class="navbar navbar-expand navbar-dark">
     <div class="collapse navbar-collapse justify-content-around" id="navbar">
-        <a id="navlogo" class="navbar-nav navbar-brand" href="https://aleciacho.eu/">
+        <a id="navlogo" class="navbar-nav navbar-brand" href="<?php echo $domain; ?>">
             <img id="ikonka" src=<?php echo $domain; ?>"ikony/cupcake3.png" alt="Logo">AleCiacho!
         </a>
 
@@ -209,7 +209,7 @@
         $('#mpwdrstform').submit(function(e){
             e.preventDefault();
             $.ajax({
-                url: 'https://aleciacho.eu/forgotpwd.php',
+                url: '<?php echo $domain; ?>/forgotpwd.php',
                 type: 'POST',
                 data: new FormData(this),
                 cache: false,

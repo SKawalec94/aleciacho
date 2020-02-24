@@ -36,7 +36,7 @@
 	            die('<div class="alert alert-danger" role="alert"> File is too big </div>');
 	        }
 
-	        $avatar = "https://aleciacho.eu/media/avatary/".$final_image;
+	        $avatar = $domain."media/avatary/".$final_image;
 
 	        $sql = "UPDATE Klienci SET avatar = '$avatar' WHERE login = '$username'";
 

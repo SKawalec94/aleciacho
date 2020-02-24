@@ -48,7 +48,7 @@
     <div class="row">
         <div class="col-12">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="https://aleciacho.eu/">Strona główna</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo $domain; ?>">Strona główna</a></li>
                 <li class="breadcrumb-item active">Moje konto</li>
             </ol>
         </div>
@@ -139,7 +139,7 @@
                                         echo '
                                         <tr>
                                             <th>'.$i++ .'</th>
-                                            <td><a href="https://aleciacho.eu/ocena/?transakcja='.$nr_transakcji.'"  target="_blank">'.$nr_transakcji.'</a></td>
+                                            <td><a href="'.$domain.'ocena/?transakcja='.$nr_transakcji.'"  target="_blank">'.$nr_transakcji.'</a></td>
                                             <td>'.$data.'</td>
                                         </tr>';
                                     }

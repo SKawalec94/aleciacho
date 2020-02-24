@@ -15,7 +15,7 @@
 <div class="row okruszki">
     <div class="col-sm-12">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="https://aleciacho.eu/">Strona główna</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo $domain; ?>">Strona główna</a></li>
             <li class="breadcrumb-item active">Resetowanie hasła</li>
         </ol>
     </div>
@@ -72,7 +72,7 @@ $(document).ready(function (){
                 contentType: false,
                 processData: false,
                 success: function () {
-                    location.replace('https://aleciacho.eu/');
+                    location.replace('<?php echo $domain; ?>');
                 }
             });
     });

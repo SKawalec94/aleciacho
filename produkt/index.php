@@ -15,7 +15,7 @@
     {
         if(!(isset($_GET['pid'])))
         {
-        	header('Location: https://aleciacho.eu/');
+        	header("Location: $domain");
         	exit();
         }
 
@@ -28,7 +28,7 @@
 
         		if(!($admin))
         		{
-        			header("Location: https://aleciacho.eu/");
+        			header("Location: $domain");
         			die();
         		}
 
@@ -79,9 +79,9 @@
 			    <div class="row">
 			        <div class="col-12">
 			            <ol class="breadcrumb">
-			                <li class="breadcrumb-item"><a href="https://aleciacho.eu/">Strona główna</a></li>';
+			                <li class="breadcrumb-item"><a href="'.$domain.'">Strona główna</a></li>';
 			                if(!($new)) echo '
-                            <li class="breadcrumb-item"><a href="https://aleciacho.eu/?cat='.strtolower($kategoria).'">'.$kategoria.'</a></li>
+                            <li class="breadcrumb-item"><a href="'.$domain.'?cat='.strtolower($kategoria).'">'.$kategoria.'</a></li>
 			                <li class="breadcrumb-item active">'. $nazwa .'</li>';
 			                else echo '<li class="breadcrumb-item active">Dodawanie nowego produktu</li>';
 			            echo
@@ -94,7 +94,7 @@
 
 			if($admin)
 		    {
-		        echo '<a href="https://aleciacho.eu/admin/" class="admin">
+		        echo '<a href="'.$domain.'admin/" class="admin">
 						<i class="moj-admin fas">&#xf3ed;</i>
 					</a>';
 			}
@@ -102,19 +102,19 @@
 			switch($mode)
 	        {
 		        case 'edit':
-		            echo '<a href="https://aleciacho.eu/admin/" class="admin">
+		            echo '<a href="'.$domain.'admin/" class="admin">
 				            <i class="moj-admin fas">&#xf3ed;</i>
 				        </a>';
 		            break;
 		        case 'new':
-		            echo '<a href="https://aleciacho.eu/admin/" class="admin">
+		            echo '<a href="'.$domain.'admin/" class="admin">
 				            <i class="moj-admin fas">&#xf3ed;</i>
 				        </a>';
 		            break;
 		        default:
 		            if($_SESSION['log_state']) {
                         echo '
-                                <a href="https://aleciacho.eu/koszyk/" class="koszyk">
+                                <a href="'.$domain.'koszyk/" class="koszyk">
                                     <i class="moj-koszyk fas">&#xf291;</i>
                                 </a>';
                                 if($suma_koszyka >= 1) echo '<i class="stan_koszyka">'.$suma_koszyka.'</i>';
@@ -337,7 +337,7 @@
     }
     else
     {
-    	header('Location: https://aleciacho.eu/');
+    	header("Location: $domain");
     }
 
     
@@ -358,7 +358,7 @@
 			    ajaxStart: function() { $body.addClass("loading");    },
 			    ajaxStop: function() {
 			    	$body.removeClass("loading");
-			    	window.location.replace("https://aleciacho.eu/admin/");
+			    	window.location.replace("<?php echo $domain; ?>admin/");
 			    }    
 			});
 
@@ -383,7 +383,7 @@
 			    ajaxStart: function() { $body.addClass("loading");    },
 			    ajaxStop: function() {
 			    	$body.removeClass("loading");
-			    	window.location.replace("https://aleciacho.eu/admin/");
+			    	window.location.replace("<?php echo $domain; ?>admin/");
 			    }    
 			});
 
@@ -405,7 +405,7 @@
                 ajaxStart: function() { $body.addClass("loading");    },
                 ajaxStop: function() {
                     $body.removeClass("loading");
-                    //window.location.replace("https://aleciacho.eu/admin/");
+                    //window.location.replace("<?php echo $domain; ?>admin/");
                 }
             });
 

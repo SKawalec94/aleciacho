@@ -42,7 +42,7 @@
                     $path = $path.strtolower($final_image); 
                     move_uploaded_file($tmp,$path);
 
-                    $produkt = "https://aleciacho.eu/media/produkty/".$final_image;
+                    $produkt = $domain."media/produkty/".$final_image;
                     $sql = "UPDATE Opisy SET grafika = '$produkt' WHERE id_towaru = $id";
                     mysqli_query($conn, $sql) or die("Błąd: " . mysqli_error($conn));
                 } 

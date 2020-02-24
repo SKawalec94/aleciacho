@@ -1,7 +1,7 @@
 <?php
 	include '../session.php';
 
-	if(!($admin)) header('Location: https://aleciacho.eu/');
+	if(!($admin)) header("Location: $domain");
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
@@ -18,14 +18,14 @@
 	<div class="row okruszki">
 	    <div class="col-sm-12">
 	        <ol class="breadcrumb">
-	            <li class="breadcrumb-item"><a href="https://aleciacho.eu/">Strona główna</a></li>
+	            <li class="breadcrumb-item"><a href="<?php echo $domain; ?>">Strona główna</a></li>
 	            <li class="breadcrumb-item active">Panel administratora</li>
 	        </ol>
 	    </div>
 	</div>
 </div>
 
-<a href="https://aleciacho.eu/admin/" class="admin">
+<a href="<?php echo $domain; ?>admin/" class="admin">
 	<i class="moj-admin fas" style="font-size: 33px; color: white;">&#xf3ed;</i>
 </a>
 
@@ -97,7 +97,7 @@
 									<td>'.$kategoria.'</td>
 									<td>'.$cena.'</td>
 									<td>'.$dostepnosc.'</td>
-									<td><a href="https://aleciacho.eu/produkt/?pid='.$id.'&mode=edit">Edytuj</td>
+									<td><a href="'.$domain.'produkt/?pid='.$id.'&mode=edit">Edytuj</td>
 								</tr>';
 					}
 
@@ -263,7 +263,7 @@ require_once('../footer.php');
 <script>
 	$(document).ready(function(){
 		$('#dodaj').click(function(){
-			window.location.replace("https://aleciacho.eu/produkt/?pid=0&mode=new");
+			window.location.replace("<?php echo $domain; ?>produkt/?pid=0&mode=new");
 		});
 		$('.row').not('.okruszki, .footer').css('margin-bottom','5%');
 		$('.title i').css('float', 'right').css('font-size', 'x-large');
